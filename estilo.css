@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url(familia.jpg);
+    background-size: cover ;
+}
+.espaco {
+    height: 300px;
+    width: 300px;
+
+}
+.coracao {
+    height: 100px;
+    width: 100px;
+    background: red;
+    transform: rotate(-45deg) scale(1);
+    animation: pulsar 1s linear infinite;
+}
+@keyframes pulsar {
+    0%{
+        transform: rotate(-45deg) scale(1);
+}
+    30%{
+        transform:  translatey(100px) rotate(-45deg) scale(1.5);
+    }
+    60%{
+        transform: translatey(0px) rotate(-45deg) scale(0.6);
+    }
+    80%{
+        transform: translatey(100px) rotate(-45deg) scale(1.2);
+    }
+    }
+.coracao::after {
+   content: '';
+   background: red; background-size: cover;
+   height: 100px;
+   width: 100px;
+   position: absolute;
+   top: -50%;
+   border-radius: 50%;
+}
+.coracao::before {
+    content: '';
+    background: red;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    border-radius: 50%;
+}
+
+.coracao1 {
+    height: 100px;
+    width: 100px;
+    background: rgb(111, 0, 255);
+    transform: rotate(-45deg) scale(1);
+    animation: pulsar1 1s linear infinite;
+}
+@keyframes pulsar1{
+    0%{
+        transform: rotate(-45deg) scale(1);
+}
+    30%{
+        transform:  translatey(300px) rotate(-60deg) scale(1.5);
+    }
+    60%{
+        transform: translatey(100px) rotate(60deg) scale(0.6);
+    }
+    80%{
+        transform: translatey(300px) rotate(-45deg) scale(1.2);
+    }
+    }
+.coracao1::after {
+   content: '';
+   background: rgb(111, 0, 255); background-size: cover;
+   height: 100px;
+   width: 100px;
+   position: absolute;
+   top: -50%;
+   border-radius: 50%;
+}
+.coracao1::before {
+    content: '';
+    background: rgb(111, 0, 255);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: -50%;
+    top: 0;
+    border-radius: 50%;
+}
